@@ -1,0 +1,18 @@
+{
+  "name": "yay2",
+  "version": "1.0.0",
+  "description": "Front end for Yayhooray",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cham/Yay2.git"
+  },
+  "author": "Dan Neame",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cham/Yay2/issues"
+  },
+  "homepage": "https://github.com/cham/Yay2#readme"
+}
