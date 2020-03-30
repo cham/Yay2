@@ -1,18 +1,57 @@
 {
   "name": "yay2",
   "version": "1.0.0",
+  "private": true,
   "description": "Front end for Yayhooray",
+  "author": {
+    "name": "Dan Neame"
+  },
   "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/cham/Yay2.git"
+  "dependencies": {
+    "core-js": "3.6.4",
+    "vue": "2.6.11"
   },
-  "author": "Dan Neame",
-  "license": "ISC",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "4.2.3",
+    "@vue/cli-plugin-eslint": "4.2.3",
+    "@vue/cli-service": "4.2.3",
+    "babel-eslint": "10.1.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-vue": "6.2.2",
+    "vue-template-compiler": "2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "_id": "yay2@1.0.0",
   "bugs": {
     "url": "https://github.com/cham/Yay2/issues"
   },
-  "homepage": "https://github.com/cham/Yay2#readme"
+  "homepage": "https://github.com/cham/Yay2#readme",
+  "license": "ISC",
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cham/Yay2.git"
+  }
 }
