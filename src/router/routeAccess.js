@@ -1,4 +1,3 @@
-/* eslint-disable */
 const restoreUser = store => new Promise((resolve, reject) => {
   store.dispatch('user/loginFromToken')
     .then(() => {
@@ -18,7 +17,7 @@ export default (router, store) => router.beforeEach((to, from, next) => {
   }
   restoreUser(store)
     .then(() => next())
-    .catch((e) => {
+    .catch(() => {
       if (to.path === '/') {
         return next()
       }
