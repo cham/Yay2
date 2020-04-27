@@ -5,7 +5,7 @@
       :key="thread.id"
     >
       <v-col cols="6">
-        {{thread.name}}
+        <router-link :to="`/thread/${thread.urlname}`">{{thread.name}}</router-link>
       </v-col>
       <v-col cols="2">
         {{thread.postedby}}
