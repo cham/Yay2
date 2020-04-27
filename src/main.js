@@ -3,8 +3,11 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import router from './router'
 import store from './store'
+import routeAccess from './router/routeAccess'
 
 Vue.config.productionTip = false
+
+routeAccess(router, store)
 
 new Vue({
   vuetify,

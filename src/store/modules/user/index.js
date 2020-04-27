@@ -1,7 +1,12 @@
 import * as actions from './actions'
 import mutations from './mutations'
 
-const state = {}
+const state = {
+  loggedIn: false,
+  username: '',
+  loginFetching: false,
+  loginError: ''
+}
 
 export default {
   namespaced: true,
