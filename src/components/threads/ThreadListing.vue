@@ -4,17 +4,21 @@
       v-for="thread in threads"
       :key="thread.id"
     >
-      <v-col>
+      <v-col cols="6">
         {{thread.name}}
       </v-col>
-      <v-col>
+      <v-col cols="2">
         {{thread.postedby}}
       </v-col>
-      <v-col>
+      <v-col cols="2">
         {{thread.last_comment_by}}
       </v-col>
-      <v-col>
+      <v-col cols="1">
         {{thread.numcomments}}
+      </v-col>
+      <v-col cols="1">
+        +
+        -
       </v-col>
     </v-row>
   </v-container>
