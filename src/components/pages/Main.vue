@@ -1,5 +1,5 @@
 <template>
-  <v-container class="fill-height">
+  <v-container fill-height fluid>
     <thread-listing/>
   </v-container>
 </template>

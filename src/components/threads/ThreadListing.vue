@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fill-height fluid>
     <v-row
       v-for="thread in threads"
       :key="thread.id"

@@ -3,15 +3,16 @@
     <v-navigation-drawer
       permanent
       app
+      floating
     >
-      <user-info-box v-if="loggedIn" class="mb-4" />
-      <login-form v-else class="mb-4" />
+      <user-info-box v-if="loggedIn" class="ma-4" />
+      <login-form v-else class="ma-4" />
 
-      <messages-summary v-if="loggedIn" class="mb-4" />
+      <messages-summary v-if="loggedIn" class="ma-4" />
 
-      <threads-nav class="mb-4" />
+      <threads-nav class="ma-4" />
 
-      <online-buddies v-if="loggedIn" />
+      <online-buddies v-if="loggedIn" class="ma-4" />
     </v-navigation-drawer>
     <v-content>
       <router-view/>
