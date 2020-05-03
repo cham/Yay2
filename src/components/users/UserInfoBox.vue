@@ -1,7 +1,7 @@
 <template>
-  <v-card class="elevation-0">
-    <h4>Hi, {{username}}</h4>
-    <v-row class="mx-0">
+  <v-card class="elevation-0 pa-2 dotted-border" tile>
+    <h5>Hi, {{username}}</h5>
+    <v-row class="mx-0" align="center">
       <v-col cols="2" class="pa-0">
         <v-img
           :src="`https://yayhooray.com/avatars/${urlname}`"
@@ -11,10 +11,10 @@
       </v-col>
       <v-col cols="10" class="pa-0">
         <p class="mb-0">
-          Preferences
+          <small class="text-uppercase">Preferences</small>
         </p>
         <p class="mb-0">
-          Logout
+          <small class="text-uppercase">Logout</small>
         </p>
       </v-col>
     </v-row>
