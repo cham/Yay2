@@ -4,7 +4,7 @@
     <v-row class="mx-0">
       <v-col cols="2" class="pa-0">
         <v-img
-          :src="`https://yayhooray.com/avatars/${username}`"
+          :src="`https://yayhooray.com/avatars/${urlname}`"
           width="16"
           height="16"
         />
@@ -27,7 +27,8 @@ import { mapState } from 'vuex'
 export default {
   name: 'UserInfoBox',
   computed: mapState('user', [
-    'username'
+    'username',
+    'urlname'
   ])
 }
 </script>

@@ -10,7 +10,7 @@ export const login = ({ commit }, { username, password }) => {
 
 export const loginFromToken = ({ commit }) => {
   return userApi.loginFromToken()
-    .then(({ username }) => commit(types.USER_LOGIN_SUCCESS, { username }))
+    .then(({ username, urlname }) => commit(types.USER_LOGIN_SUCCESS, { username, urlname }))
 }
 
 export const logout = () => userApi.logout()
