@@ -4,12 +4,12 @@
       permanent
       app
     >
-      <user-info-box v-if="loggedIn" />
-      <login-form v-else />
+      <user-info-box v-if="loggedIn" class="mb-4" />
+      <login-form v-else class="mb-4" />
 
-      <messages-summary v-if="loggedIn" />
+      <messages-summary v-if="loggedIn" class="mb-4" />
 
-      <threads-nav />
+      <threads-nav class="mb-4" />
 
       <online-buddies v-if="loggedIn" />
     </v-navigation-drawer>
