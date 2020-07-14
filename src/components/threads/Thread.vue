@@ -27,7 +27,7 @@
         <span class="mx-2">&gt;</span>
         {{categories[0]}}
         <span class="mx-2">&gt;</span>
-        <router-link :to="`/threads/${urlname}`">{{name}}</router-link>
+        <router-link :to="`/thread/${urlname}`">{{name}}</router-link>
       </v-col>
     </v-row>
     <v-divider/>
@@ -39,6 +39,9 @@
         {{comment.postedby}}
       </v-col>
       <v-col cols="10" v-html="comment.content"/>
+      <v-col cols="12">
+        <v-divider />
+      </v-col>
     </v-row>
     <v-row align="center">
       <v-col cols="3">
@@ -54,7 +57,15 @@
         <span class="mx-2">&gt;</span>
         {{categories[0]}}
         <span class="mx-2">&gt;</span>
-        <router-link :to="`/threads/${urlname}`">{{name}}</router-link>
+        <router-link :to="`/thread/${urlname}`">{{name}}</router-link>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12">
+        <post-comment
+          :urlname="urlname"
+          @newComment="onNewComment"
+        />
       </v-col>
     </v-row>
   </v-container>
@@ -62,9 +73,13 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import PostComment from '@/components/threads/PostComment'
 
 export default {
   name: 'Thread',
+  components: {
+    PostComment
+  },
   props: {
     urlname: {
       type: String,
@@ -98,7 +113,15 @@ export default {
     ...mapActions('thread', [
       'fetchThread',
       'clearThreadState'
-    ])
+    ]),
+    onNewComment () {
+      const newCommentTotal = this.numcomments + 1
+      const page = Math.ceil(newCommentTotal / this.pageSize)
+      if (this.page === page) {
+        this.fetchThread({ urlname: this.urlname, page })
+      }
+      this.page = page
+    }
   },
   watch: {
     page () {

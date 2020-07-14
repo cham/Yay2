@@ -5,6 +5,7 @@ import createLogger from 'vuex/dist/logger'
 import user from './modules/user'
 import threadlisting from './modules/threadlisting'
 import thread from './modules/thread'
+import comment from './modules/comment'
 
 Vue.use(Vuex)
 
@@ -14,7 +15,8 @@ export default new Vuex.Store({
   modules: {
     user,
     threadlisting,
-    thread
+    thread,
+    comment
   },
   strict: debug,
   plugins: debug ? [createLogger()] : []
