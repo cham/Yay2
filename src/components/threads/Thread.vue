@@ -49,7 +49,7 @@
         />
       </v-col>
       <v-col>
-        1 - 50 of {{numcomments}} in
+        {{firstCommentIndex}} - {{lastCommentIndex}} of {{numcomments}} in
         <router-link to="/" class="ml-2">Threads</router-link>
         <span class="mx-2">&gt;</span>
         {{categories[0]}}
